@@ -41,3 +41,13 @@ addBtn.onclick = () => {
       input.value ="";
       displayHabits();
       };
+
+      // COMMIT 5: Toggle completion feature
+      function toggle(i) {
+        const today = new Date().toDateString();
+
+      // COMMIT 4: Delete habit feature
+      function remove(i) { 
+        habits.splice(i, 1);
+        displayHabits();
+}
