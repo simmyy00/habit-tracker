@@ -26,6 +26,10 @@ function displayHabits() {
         list.appendChild(li);
 });
 
+// COMMMIT 6: Save data in localStorage
+localStorage.setItem("habits", JSON.stringify(habits));
+}
+
 //COMMIT 2: Add habit functionality
 addBtn.onclick = () => {
     if (!input.value.trim()) return;
@@ -45,6 +49,17 @@ addBtn.onclick = () => {
       // COMMIT 5: Toggle completion feature
       function toggle(i) {
         const today = new Date().toDateString();
+
+        // COMMIT 7: Streak tracking logic
+        if (habits[i]. lastDone !== today) { 
+            habits[i].streak++;
+            habits[i].lastDone = today;
+         }
+
+         habits[i].done =  !habits[i].done;
+
+         displayHabits();
+         }
 
       // COMMIT 4: Delete habit feature
       function remove(i) { 
