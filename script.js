@@ -1,0 +1,43 @@
+const input = document.getElementById("habitField");
+const addBtn = document.getElementById("addHabit");
+const list = document.getElementById("list");
+const themeToggle = document.getElementById("themeToggle");
+
+let habits = JSON.parse(localStorage.getItem("habits")) || [];
+let darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
+
+// COMMIT 3: render habits dynamically
+function displayHabits() {
+    list.innerHTML = "";
+
+    habits.forEach((h, i) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+        <span class="${h.done ? "done" : ""}">
+        ${h.name} (🔥 ${h.streak})
+      </span>
+      <div>
+        <button onclick="toggle(${i})">✔</button>
+        <button onclick="remove(${i})">✖</button>
+      </div>
+        `;
+
+        list.appendChild(li);
+});
+
+//COMMIT 2: Add habit functionality
+addBtn.onclick = () => {
+    if (!input.value.trim()) return;
+
+    hbaits.push({
+        name: input.value,
+        done: false,
+        streak: 0,
+        lastDone: null
+
+      });
+
+      input.value ="";
+      displayHabits();
+      };
