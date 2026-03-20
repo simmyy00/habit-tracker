@@ -1,0 +1,70 @@
+body{
+    font-family: sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    transition: 0.3s;
+}
+
+.app {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    border-radius: 12px;
+}
+
+
+/* COMMIT 9: Improve UI styling */
+.app {
+     box-shadow: 0 4px 10px rgba(0,0,0,0,1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 70%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+opacity: 0.9;
+}
+
+li {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+/*Dark mode styles*/
+.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark .app {
+    background: #2c2c2c;
+}
