@@ -66,3 +66,17 @@ addBtn.onclick = () => {
         habits.splice(i, 1);
         displayHabits();
 }
+
+       // COMMIT 8: Dark mode toggle logic
+       function applyTheme() {
+        document.body.classList.toggle("dark", darkMode);
+       }
+
+       themeToggle.onclick = () => {
+        darkMode =  !darkMode;
+        loccalStorage.setItem("darkMode", JSON.stringify(darkMode));
+        applyTheme();
+        };
+
+        applyTheme();
+        displayHabits();
