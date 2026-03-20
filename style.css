@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
   display: flex;
   justify-content: center;
   padding-top: 50px;
@@ -12,7 +12,11 @@ body {
   padding: 25px;
   width: 340px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+ 
+
+.app {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .header {
